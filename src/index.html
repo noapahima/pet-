@@ -1,0 +1,52 @@
+<h1 id="title">Pet Form</h1>
+<div id="form-outer">
+  <p id="description">
+    Tell us about your Pet
+  </p>
+  <form id="pet-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name">Pet name: </label>
+        <input type="text" id="name" name="name" class="form-control"
+        required maxlength="25" 
+        [(ngModel)]="hero.name" #name="ngModel">
+  
+  <div *ngIf="name.invalid && (name.dirty || name.touched)"
+      class="alert">
+  
+  
+
+  </div>
+      <label id="age-label" for="age">Pet name: </label>
+      <div class="rightTab">
+        <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Pet age">
+      </div>
+  </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="currentPos">What kind of Pet do you have?</label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+      <option disabled value>Select an option</option>
+      <option  value="student">Dog</option>
+      <option value="job">Cat</option>
+      <option value="learner">Horse</option>
+      <option value="other">Other</option>
+    </select>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="userRating">color of the pet?</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>black<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>white<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</div>
